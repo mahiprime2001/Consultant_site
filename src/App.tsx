@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Box } from '@mui/material';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
@@ -14,21 +15,21 @@ import { AdminPanel } from './components/AdminPanel';
 
 function HomePage() {
   return (
-    <>
+    <Box>
       <Hero />
       <Services />
       <About />
       <Experience />
       <Testimonials />
       <Contact />
-    </>
+    </Box>
   );
 }
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white">
+      <Box sx={{ minHeight: '100vh', bgcolor: 'background.default' }}>
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -37,7 +38,7 @@ function App() {
           <Route path="/admin" element={<AdminPanel />} />
         </Routes>
         <Footer />
-      </div>
+      </Box>
     </Router>
   );
 }
