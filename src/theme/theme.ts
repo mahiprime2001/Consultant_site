@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme, darken, lighten } from '@mui/material/styles';
 
 // Material Design 3 Color Tokens
 const md3Colors = {
