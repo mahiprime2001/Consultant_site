@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
-    include: ['prop-types', 'react-is', '@mui/material', '@mui/system'],
+    include: ['prop-types', 'react-is', '@mui/material', '@mui/system', '@mui/material/styles'],
     exclude: ['@mui/icons-material'],
   },
 });
